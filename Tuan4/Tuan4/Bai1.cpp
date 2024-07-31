@@ -13,11 +13,21 @@ int TongKhuDQ(int n) {
 	}
 	return tong;
 }
+float TongPSKhuDQ(int n) {
+	float tong1 = 0;
+	for (float i = 1; i <=n; i++)
+	{
+		float tinh = i / (i + 1);
+		tong1 = tong1 + tinh;
+	}
+	return tong1;
+}
 int main() {
 	int n;
 	printf("Nhap vao n:");
 	scanf("%d", &n);
-	printf("\nKet qua cua tong:%d", TongDQ(n));
-	printf("\nKet qua tong cua phan so:%d", TongKhuDQ(n));
+	printf("\nKet qua cua tong (DQ):%d", TongDQ(n));
+	printf("\nKet qua cua tong (Khu DQ):%d", TongKhuDQ(n));
+	printf("\nKet qua cua tong phan so:%.2f", TongPSKhuDQ(n));
 	getch();
 }
